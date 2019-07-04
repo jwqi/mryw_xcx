@@ -1,0 +1,6 @@
+<view class='container'>
+  <text class='name'>{{detail.name}}</text>
+  <text class='author'>{{detail.author}}</text>
+  <text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text>
+  <button class='next' catchtap='next'>下一篇</button>
+</view>
