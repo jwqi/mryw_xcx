@@ -1,4 +1,1 @@
-/**app.wxss**/
-.container {
-
-} 
+@import './iconfont/iconfont.wxss'; 

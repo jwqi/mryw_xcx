@@ -1,6 +1,10 @@
 <view class='container'>
+  <view class='toolbar'>
+   <view class="iconfont icon-shuaxin shuaxin" catchtap='next'></view>
+   <view class="iconfont icon-shoucang shoucang"></view>
+   <view class="iconfont icon-shoucang1 shoucang1"></view>
+  </view>
   <text class='name'>{{detail.name}}</text>
   <text class='author'>{{detail.author}}</text>
   <text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text>
-  <button class='next' catchtap='next'>下一篇</button>
 </view>
