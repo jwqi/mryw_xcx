@@ -43,8 +43,42 @@ Page({
           detail: res.data,
           ps: res.data.text.split('\n')
         });
+        wx.showToast({
+          title: res.data.name,
+          icon: 'loading'
+        });
       }
     });
+  },
+  /**
+ * 收藏文章
+ */
+  shoucang() {
+    wx.request({
+      url: 'http://127.0.0.1:8080/article/collect',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'POST',
+      data: {
+        openId: wx.getStorageSync('openId'),
+        articleId: this.data.detail.id
+      },
+      success: (res) => {
+        console.log(res.data);
+        wx.showToast({
+          title: res.data
+        });
+      }
+    });
+  },
+/**
+* 跳转收藏页面
+*/
+  tolist() {
+    wx.navigateTo({
+      url: '/pages/list/list',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

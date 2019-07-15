@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+}
+
+.article .title {
+  flex: 7;
+  white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  margin-left: 10rpx;
+}
+
+.article .author {
+  flex: 3;
+  white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  margin-top: 10rpx;
+}
