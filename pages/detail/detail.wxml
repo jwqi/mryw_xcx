@@ -1,10 +1,10 @@
 <view class='container'>
   <view class='toolbar'>
-   <view class="iconfont icon-shuaxin shuaxin" catchtap='next'></view>
+   <view class="iconfont icon-shuaxin shuaxin {{isActivity?'shuaxin_activity':''}}" catchtap='next'></view>
    <view class="iconfont icon-shoucang shoucang" catchtap='shoucang'></view>
    <view class="iconfont icon-shoucang1 shoucang1" catchtap='tolist'></view>
   </view>
-  <text class='name'>{{detail.name}}</text>
-  <text class='author'>{{detail.author}}</text>
+  <text class='name'>{{article.name}}</text>
+  <text class='author'>{{article.author}}</text>
   <text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text>
 </view>

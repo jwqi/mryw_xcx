@@ -32,7 +32,7 @@
 
 .article .menu {
   width: 150rpx;
-  height: 60rpx;
+  height: 80rpx;
   background-color: #000;
   position: absolute;
   border-radius: 10rpx;
@@ -40,10 +40,10 @@
   margin-left: -75rpx;
   top: -20rpx;
   text-align: center;
-  line-height: 60rpx;
+  line-height: 80rpx;
 }
 
 .article .menu .del {
   color: #fff;
-  font-size: 25rpx;
+  font-size: 30rpx;
 }

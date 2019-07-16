@@ -18,6 +18,11 @@
 .shuaxin {
   font-size: 50rpx;
   margin-left: 20rpx;
+  transition: all 3s;
+}
+
+.shuaxin_activity {
+  transform: rotate(360deg);
 }
 
 .shoucang {

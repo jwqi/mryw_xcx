@@ -8,20 +8,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detail:{},
-    ps: []
+    article:{},
+    ps: [],
+    isActivity:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     if (!options.id){
       this.getData();
     } else {
       this.setData({
-        detail: options,
+        article: options,
         ps: options.text.split('\n')
       })
     }
@@ -40,15 +40,17 @@ Page({
    * 获取文章信息
    */
   getData() {
+    this.setData({
+      isActivity: !this.data.isActivity
+    });
     wx.request({
       url: 'http://www.jwqi.top/mryw/article/random',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: (res) => {
-        console.log(res.data);
         this.setData({
-          detail: res.data,
+          article: res.data,
           ps: res.data.text.split('\n')
         });
         wx.showToast({
@@ -70,10 +72,9 @@ Page({
       method: 'POST',
       data: {
         openId: wx.getStorageSync('openId'),
-        articleId: this.data.detail.id
+        articleId: this.data.article.id
       },
       success: (res) => {
-        console.log(res.data);
         wx.showToast({
           title: res.data
         });
