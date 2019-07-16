@@ -10,7 +10,8 @@ Page({
   data: {
     article:{},
     ps: [],
-    isActivity:false
+    isActivity: false,
+    isShouCang: true
   },
 
   /**
@@ -85,7 +86,7 @@ Page({
 * 跳转收藏页面
 */
   tolist() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/list/list',
     })
   },

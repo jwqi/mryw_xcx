@@ -1,3 +1,7 @@
+page{
+  background-color: rgb(247, 235, 207);
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -9,16 +13,16 @@
   left: 0;
   bottom: 0;
   height: 100rpx;
-  background-color: #ccc;
+  background-color: #FAF0E6;
   width: 100%;
   display: flex;
   line-height: 100rpx;
 }
 
 .shuaxin {
-  font-size: 50rpx;
+  font-size: 60rpx;
   margin-left: 20rpx;
-  transition: all 3s;
+  transition: all 2s;
 }
 
 .shuaxin_activity {
@@ -26,35 +30,37 @@
 }
 
 .shoucang {
-  font-size: 50rpx;
-  margin-left: 10rpx;
+  font-size: 60rpx;
+  margin-left: 30rpx;
 }
 
 .shoucang1 {
-  font-size: 50rpx;
+  font-size: 60rpx;
    margin-left: auto;
    margin-right: 20rpx;
 }
 
 .name {
   margin: 20rpx auto;
-  font-size: 40rpx;
+  font-size: 45rpx;
 }
 
 .author {
   margin: 20rpx auto;
-  font-size: 30rpx;
+  font-size: 40rpx;
   color: rgb(169,169,169);
 }
 
-.item {
-  font-size: 28rpx;
-  padding: 10rpx 25rpx;
-  text-indent: 60rpx;
-  letter-spacing: 5rpx;
-  text-align: justify
+.content {
+  margin-bottom: 150rpx;
+  display: flex;
+  flex-direction: column; 
 }
 
-.item:last-child {
-  margin-bottom: 150rpx;
+.item {
+  font-size: 35rpx;
+  padding: 10rpx 25rpx;
+  text-indent: 80rpx;
+  letter-spacing: 5rpx;
+  text-align: justify;
 }

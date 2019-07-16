@@ -6,5 +6,5 @@
   </view>
   <text class='name'>{{article.name}}</text>
   <text class='author'>{{article.author}}</text>
-  <text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text>
+  <view class='content'><text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text></view>
 </view>

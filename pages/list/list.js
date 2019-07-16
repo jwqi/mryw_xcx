@@ -39,7 +39,7 @@ Page({
    */
   toDetail(e){
     let { id, name, author, text } = e.currentTarget.dataset;
-   wx.redirectTo({
+    wx.reLaunch({
      url: '/pages/detail/detail?id=' + id + '&name=' + name + '&author=' + author + '&text=' + text,
    })
   },
