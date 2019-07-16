@@ -16,7 +16,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData();
+    console.log(options);
+    if (!options.id){
+      this.getData();
+    } else {
+      this.setData({
+        detail: options,
+        ps: options.text.split('\n')
+      })
+    }
   },
   /**
    * 下一篇文章
@@ -55,7 +63,7 @@ Page({
  */
   shoucang() {
     wx.request({
-      url: 'http://127.0.0.1:8080/article/collect',
+      url: 'http://www.jwqi.top/mryw/article/collect',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -76,7 +84,7 @@ Page({
 * 跳转收藏页面
 */
   tolist() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/list/list',
     })
   },

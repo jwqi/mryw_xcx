@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 50rpx;
 }
 
 .article {
@@ -9,6 +10,7 @@
   padding-bottom: 30rpx;
   border-bottom: 1rpx solid #ccc;
   display: flex;
+  position: relative;
 }
 
 .article .title {
@@ -25,4 +27,23 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
   margin-top: 10rpx;
+  font-size: 25rpx;
+}
+
+.article .menu {
+  width: 150rpx;
+  height: 60rpx;
+  background-color: #000;
+  position: absolute;
+  border-radius: 10rpx;
+  left: 50%;
+  margin-left: -75rpx;
+  top: -20rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.article .menu .del {
+  color: #fff;
+  font-size: 25rpx;
 }
