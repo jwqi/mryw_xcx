@@ -9,7 +9,7 @@ App({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'http://www.jwqi.top/mryw/login/getOpenId',
+            url: 'https://mall.petoffice.tech/mryw/login/getOpenId',
             data: {
               code: res.code
             },

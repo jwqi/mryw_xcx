@@ -36,8 +36,8 @@ page{
 
 .shoucang1 {
   font-size: 60rpx;
-   margin-left: auto;
-   margin-right: 20rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
 }
 
 .name {

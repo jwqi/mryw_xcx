@@ -45,7 +45,7 @@ Page({
       isActivity: !this.data.isActivity
     });
     wx.request({
-      url: 'http://www.jwqi.top/mryw/article/random',
+      url: 'https://mall.petoffice.tech/mryw/article/random',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -66,7 +66,7 @@ Page({
  */
   shoucang() {
     wx.request({
-      url: 'http://www.jwqi.top/mryw/article/collect',
+      url: 'https://mall.petoffice.tech/mryw/article/collect',
       header: {
         'content-type': 'application/json' // 默认值
       },

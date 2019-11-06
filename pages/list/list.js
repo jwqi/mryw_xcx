@@ -20,7 +20,7 @@ Page({
    */
   getCollectionList(){
     wx.request({
-      url: 'http://www.jwqi.top/mryw/article/getCollectionList',
+      url: 'https://mall.petoffice.tech/mryw/article/getCollectionList',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -58,7 +58,7 @@ Page({
    */
   delCollectionArticle(){
     wx.request({
-      url: 'http://www.jwqi.top/mryw/article/delCollection?openId=' + wx.getStorageSync('openId') + "&articleId=" + this.data.chooseId,
+      url: 'https://mall.petoffice.tech/mryw/article/delCollection?openId=' + wx.getStorageSync('openId') + "&articleId=" + this.data.chooseId,
       header: {
         'content-type': 'application/json' // 默认值
       },
