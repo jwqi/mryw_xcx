@@ -1,10 +1,38 @@
-<view class='container'>
+<view class='container' catchtouchmove="{{showModal?'return':''}}">
   <view class='toolbar'>
-   <view class="iconfont icon-shuaxin shuaxin {{isActivity?'shuaxin_activity':''}}" catchtap='next'></view>
-   <view class="iconfont icon-shoucang shoucang" catchtap='shoucang'></view>
-   <view class="iconfont icon-shoucang1 shoucang1" catchtap='tolist'></view>
+    <view class="iconfont icon-shuaxin shuaxin {{isActivity?'shuaxin_activity':''}}" catchtap='next'></view>
+    <view class="iconfont icon-shoucang shoucang" catchtap='shoucang'></view>
+    <view class="iconfont icon-naozhong naozhong" catchtap='toNotice'></view>
+    <view class="iconfont icon-collection collection" catchtap='tolist'></view>
   </view>
   <text class='name'>{{article.name}}</text>
   <text class='author'>{{article.author}}</text>
-  <view class='content'><text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text></view>
+  <view class='content'>
+    <text wx:for="{{ps}}" wx:key="{{index}}" class='item'>{{item}}</text>
+  </view>
+
+  <!--Modal-->
+  <view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+  <view wx:if="{{showModal}}">
+    <view class="modal-content">
+      <text class='modal-title'>请设置提醒时间</text>
+      <view class="tui-picker-content">
+        <picker mode="date" value="{{date}}" bindchange="changeDate">
+          <view class="tui-picker-detail">
+            日期: {{date}}
+          </view>
+        </picker>
+      </view>
+      <view class="tui-picker-content">
+        <picker mode="time" value="{{time}}" bindchange="changeTime">
+          <view class="tui-picker-detail">
+            时间: {{time}}
+          </view>
+        </picker>
+      </view>
+      <view>
+        <button class='btn' bindtap="saveMsg">提交</button>
+      </view>
+    </view>
+  </view>
 </view>

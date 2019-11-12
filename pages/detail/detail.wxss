@@ -1,4 +1,4 @@
-page{
+page {
   background-color: rgb(247, 235, 207);
 }
 
@@ -13,7 +13,7 @@ page{
   left: 0;
   bottom: 0;
   height: 100rpx;
-  background-color: #FAF0E6;
+  background-color: #faf0e6;
   width: 100%;
   display: flex;
   line-height: 100rpx;
@@ -34,7 +34,12 @@ page{
   margin-left: 30rpx;
 }
 
-.shoucang1 {
+.naozhong {
+  font-size: 60rpx;
+  margin-left: 30rpx;
+}
+
+.collection {
   font-size: 60rpx;
   margin-left: auto;
   margin-right: 20rpx;
@@ -48,13 +53,13 @@ page{
 .author {
   margin: 20rpx auto;
   font-size: 40rpx;
-  color: rgb(169,169,169);
+  color: rgb(169, 169, 169);
 }
 
 .content {
   margin-bottom: 150rpx;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .item {
@@ -63,4 +68,42 @@ page{
   text-indent: 80rpx;
   letter-spacing: 5rpx;
   text-align: justify;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-content {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9500;
+  width: 80%;
+  padding: 50rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.tui-picker-content {
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.modal-title {
+  font-size: 50rpx;
+}
+
+button {
+  background-color: rgb(247, 235, 207);
 }
